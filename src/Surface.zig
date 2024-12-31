@@ -1202,6 +1202,9 @@ pub fn updateConfig(
         .config_change,
         .{ .config = config },
     );
+
+    // Finally, issue a mode 2031 DSR report
+    self.reportColorScheme(false);
 }
 
 /// Returns true if the terminal has a selection.
